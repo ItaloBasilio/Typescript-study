@@ -24,4 +24,30 @@ const CoordinateB :Coordinate  = {
     y: 30
 }
 
-console.log(calculateDistance(CoordinateA, CoordinateB)); // 
+// console.log(calculateDistance(CoordinateA, CoordinateB)); // 
+
+////////////////////////////////////
+
+interface Car {
+    brand: string;
+    model: string;
+    year: number;
+    startEngine:  () => void;
+}
+
+const myCar:  Car = {
+    brand: 'Audi',
+    model:  'A3',
+    year:  2023,
+    startEngine: () => {
+        console.log("Engine Started!");
+        
+    },
+}
+
+function drive(Car: Car): void {
+    console.log(`Driving ${Car.brand}, ${Car.model}`);
+    Car.startEngine();
+}
+
+drive(myCar);
